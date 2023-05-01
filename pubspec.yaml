@@ -1,10 +1,10 @@
 name: better_linter
 description: A starting point for Dart libraries or applications.
-version: 1.0.0
+version: 1.0.1
 
 environment:
   sdk: ">=2.19.0 <3.0.0"
 
 dependencies:
-  dart_code_metrics: ^5.5.1
+  dart_code_metrics: 5.7.2
   very_good_analysis: 4.0.0+1
