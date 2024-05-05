@@ -37,7 +37,7 @@ dart_code_metrics:
     - avoid-late-keyword: false
     - avoid-late-keyword:
         allow-initialized: true
-    - avoid-nested-conditional-expressions: 
+    - avoid-nested-conditional-expressions:
         acceptable-level: 2
     - avoid-returning-widgets:
         ignored-names:
@@ -48,7 +48,7 @@ dart_code_metrics:
     - format-comment:
         only-doc-comments: true
     - no-equal-arguments: false
-    - no-empty-block: 
+    - no-empty-block:
         exclude:
           - test/**
     - no-magic-number: false
@@ -108,5 +108,5 @@ dart_code_metrics:
         min-length: 3
         max-length: 40
     - prefer-static-class:
-       ignore-names:
+        ignore-names:
           - testFunction
