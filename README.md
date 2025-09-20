@@ -1,4 +1,4 @@
-![Dart SDK Version](https://badgen.net/badge/Dart/2.19.0/blue)
+![Dart SDK Version](https://badgen.net/badge/Dart/3.9.0/blue)
 
 ## Usage
 
@@ -16,10 +16,4 @@ Then, add an include in `analysis_options.yaml`:
 
 ```yaml
 include: package:better_linter/analysis_options.yaml
-```
-
-This will ensure you always use the latest version of the lints. If you wish to restrict the lint version, specify a version of `analysis_options.yaml` instead:
-
-```yaml
-include: package:better_linter/analysis_options.1.0.0.yaml
 ```

@@ -1,1 +1,91 @@
-include: package:better_linter/analysis_options.2.1.0.yaml
+include: package:very_good_analysis/analysis_options.yaml
+
+analyzer:
+  plugins:
+    - dart_code_linter
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "**/*.config.dart"
+    - "**/firebase_options.dart"
+    - "build/**"
+    - "assets/**"
+    - "debug_symbols/**"
+    - "ios/**"
+    - "macos/**"
+    - "web/**"
+    - "windows/**"
+    - "linux/**"
+    - "android/**"
+    - ".vscode/**"
+    - ".idea/**"
+    - ".git/**"
+    - ".github/**"
+    - ".flutter/**"
+    - ".dart_tool/**"
+    - ".idea/**"
+
+linter:
+  rules:
+    public_member_api_docs: false
+    lines_longer_than_80_chars: false
+    one_member_abstracts: false
+    flutter_style_todos: false
+
+dart_code_linter:
+  extends:
+    - package:dart_code_linter/presets/all.yaml
+  metrics:
+    cyclomatic-complexity: 20
+    maximum-nesting-level: 5
+    number-of-parameters: 6
+    source-lines-of-code: 50
+  metrics-exclude:
+    - test/**
+  rules-exclude:
+    - test/**
+  rules:
+    - avoid-collection-methods-with-unrelated-types:
+        strict: false
+    - avoid-non-ascii-symbols: false
+    - avoid-non-null-assertion: false
+    - avoid-passing-async-when-sync-expected: false
+    - avoid-ignoring-return-values: false
+    - avoid-late-keyword: false
+    - avoid-nested-conditional-expressions:
+        acceptable-level: 2
+    - avoid-returning-widgets:
+        ignored-names:
+          - testFunction
+        ignored-annotations:
+          - allowedAnnotation
+    - arguments-ordering: false
+    - format-comment:
+        only-doc-comments: true
+        ignored-patterns:
+          - ^ cSpell.*  # Ignores all the comments that start with 'cSpell' (for example: '// cSpell:disable-next-line').
+    - no-equal-arguments: false
+    - no-magic-number: false
+    - newline-before-return: false
+    - missing-test-assertion:
+        include-assertions:
+          - verify
+          - verifyNever
+    - prefer-match-file-name:
+        exclude:
+          - test/**
+    - prefer-extracting-callbacks:
+        ignored-named-arguments:
+          - buildWhen
+          - listener
+        allowed-line-count: 15
+    - prefer-correct-identifier-length:
+        exceptions: [ 'id' , 'iv']
+        max-identifier-length: 35
+        min-identifier-length: 3
+    - prefer-correct-type-name:
+        min-length: 3
+        max-length: 40
+    - prefer-static-class:
+        ignore-names:
+          - testFunction
