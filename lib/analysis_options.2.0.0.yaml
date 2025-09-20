@@ -2,7 +2,7 @@ include: package:very_good_analysis/analysis_options.yaml
 
 analyzer:
   plugins:
-    - dart_code_metrics
+    - dart_code_linter
   exclude:
     - "**/*.g.dart"
     - "**/*.freezed.dart"
@@ -15,7 +15,7 @@ linter:
     lines_longer_than_80_chars: false
     one_member_abstracts: false
     
-dart_code_metrics:
+dart_code_linter:
   extends:
     - package:dart_code_metrics_presets/all.yaml
   metrics:
@@ -35,8 +35,6 @@ dart_code_metrics:
     - avoid-passing-async-when-sync-expected: false
     - avoid-ignoring-return-values: false
     - avoid-late-keyword: false
-    - avoid-late-keyword:
-        allow-initialized: true
     - avoid-nested-conditional-expressions:
         acceptable-level: 2
     - avoid-returning-widgets:

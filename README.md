@@ -1,4 +1,4 @@
-![Dart SDK Version](https://badgen.net/badge/Dart/3.4.0/blue)
+![Dart SDK Version](https://badgen.net/badge/Dart/2.19.0/blue)
 
 ## Usage
 

@@ -8,6 +8,22 @@ analyzer:
     - "**/*.freezed.dart"
     - "**/*.config.dart"
     - "**/firebase_options.dart"
+    - "build/**"
+    - "assets/**"
+    - "debug_symbols/**"
+    - "ios/**"
+    - "macos/**"
+    - "web/**"
+    - "windows/**"
+    - "linux/**"
+    - "android/**"
+    - ".vscode/**"
+    - ".idea/**"
+    - ".git/**"
+    - ".github/**"
+    - ".flutter/**"
+    - ".dart_tool/**"
+    - ".idea/**"
 
 linter:
   rules:
@@ -46,6 +62,8 @@ dart_code_linter:
     - arguments-ordering: false
     - format-comment:
         only-doc-comments: true
+        ignored-patterns:
+          - ^ cSpell.*  # Ignores all the comments that start with 'cSpell' (for example: '// cSpell:disable-next-line').
     - no-equal-arguments: false
     - no-magic-number: false
     - newline-before-return: false
